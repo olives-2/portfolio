@@ -1,9 +1,8 @@
-<h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
-  
-  <style lang="postcss">
-    :global(html) {
-      background-color: theme(colors.gray.100);
-    }
-  </style>
+<script lang="ts">
+  import { base } from '$app/paths';
+</script>
+
+<nav>
+  <a href="{base}/">Home</a>
+  <a href="{base}/retex/odomo">Odomo</a>
+</nav>
