@@ -1,0 +1,4 @@
+import{a as t,t as i}from"../chunks/disclose-version.CQa56OdH.js";import"../chunks/legacy.DwjJgXDG.js";import{s as r,c as o,r as n}from"../chunks/runtime.B2jZvQBZ.js";import{s as m}from"../chunks/attributes.Cz4MMmaI.js";const l=""+new URL("../assets/me.P3IgZvEq.webp",import.meta.url).href;var d=i(`<div id="presentation" class="flex"><article class="max-w-md"><h1>Matis Olives</h1> <h2>Spécialisé dans le développement web et d'applications en POO</h2> <p>Je suis un étudiant d'informatique à l'IUT de Bordeaux-Gradignan. Dans cette formation, je
+            réalise
+            des
+            missions me formant à des situations réelles du domaine de l'informatique.</p></article> <img alt="Portrait" class="rounded-full w-10"></div>`);function v(a){var e=d(),s=r(o(e),2);m(s,"src",l),n(e),t(a,e)}export{v as component};
