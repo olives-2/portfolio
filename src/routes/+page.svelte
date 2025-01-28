@@ -80,25 +80,25 @@
     <RetexBanner
       title="Application d'administration"
       description="Développement d'une application d'administration de réseaux virtuels"
-      link="{base}/retexes/cape"
+      link={`${base}/retex/cape`}
       img={"/img/retexes/cape/screen1.webp"}
     ></RetexBanner>
     <RetexBanner
       title="Application web"
       description="Répertoire de séries TV"
-      link="{base}/retexes/serizz"
+      link="/retex/serizz"
       img={"/img/retexes/serizz/serizz.webp"}
     ></RetexBanner>
     <RetexBanner
       title="Application Python"
       description="Portage d'un jeu de plateau en Python"
-      link="{base}/retexes/serizz"
+      link="/retex/pandemic"
       img={"/img/retexes/serizz/serizz.webp"}
     ></RetexBanner>
     <RetexBanner
       title="Application C#"
       description="Portage d'un jeu de plateau en C#"
-      link="{base}/retexes/serizz"
+      link="/retex/csharp"
       img={"/img/retexes/serizz/serizz.webp"}
     ></RetexBanner>
   </div>

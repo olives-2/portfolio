@@ -26,15 +26,6 @@
 
 <style lang="postcss">
   .divider {
-    margin-bottom: 6rem;
-  }
-
-  #gradient {
-    background: rgb(31, 41, 55);
-    background: linear-gradient(
-      23deg,
-      rgba(31, 41, 55, 0.8) 0%,
-      rgba(29, 78, 216, 0.8) 78%
-    );
+    margin-bottom: 4rem;
   }
 </style>

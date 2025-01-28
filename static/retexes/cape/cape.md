@@ -2,15 +2,24 @@
 
 ## Administration de réseaux virtuels
 
-_Stage_
+<section class="type">
+Stage
+</section>
 
-<article>
 
-<section class="section-screenshots">
+<article class="screenshots">
 
-![Affichage d'un réseau avec un algorithme de simulation de force](/retexes/cape/cape_admin.webp)
+<section class="img-1">
+
+![Affichage d'un réseau avec un algorithme de simulation de force](/portfolio/retexes/cape/cape_admin.webp)
+
+Affichage d'un réseau avec un algorithme de simulation de force
 
 </section>
+
+</article>
+
+<article>
 
 <section class="section section-cahier-des-charges">
 
@@ -30,6 +39,7 @@ _Stage_
 - Discussions fréquentes sur l'avancée des fonctionnalités
 - Retours sur l'application par le porteur de projet
 - GitLab pour suivi des fonctionnalités et bugs
+
 </section>
 
 <section class="section section-livres-et-livrables">

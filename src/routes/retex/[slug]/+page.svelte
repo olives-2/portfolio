@@ -1,5 +1,5 @@
 <script>
-  import Markdown from "@magidoc/plugin-svelte-marked";
+  import { base } from "$app/paths";
   import { marked } from "marked";
   import { onMount } from "svelte";
   import { goto } from "$app/navigation";
@@ -8,13 +8,13 @@
 
   onMount(async () => {
     try {
-      const res = await fetch(`/retexes/${data.slug}/${data.slug}.md`);
+      const res = await fetch(`${base}/retexes/${data.slug}/${data.slug}.md`);
       if (!res.ok) {
         throw new Error(`Failed to load file: ${res.status} ${res.statusText}`);
       }
       mdSource = await res.text();
     } catch (err) {
-      goto("/404");
+      goto(`${base}/404`);
       console.error("Error loading Markdown:", err);
     }
   });
@@ -45,7 +45,7 @@
   }
   .markdown-wrapper :global(img) {
     border-radius: 16px;
-    width: 30%;
+    width: 25%;
     margin: 2rem;
   }
   .markdown-wrapper :global(article) {
@@ -53,7 +53,7 @@
     justify-content: center;
     flex-flow: row wrap;
   }
-
+  
   .markdown-wrapper :global(.section) {
     font-size: larger;
     background-color: rgba(45, 55, 72, 0.8);
@@ -63,5 +63,20 @@
     margin: 1rem;
     border-radius: 1rem;
     padding: 1%;
+  }
+  .markdown-wrapper :global(.type) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+    background-color: rgba(45, 55, 72, 0.8);
+    backdrop-filter: theme("blur.md");
+    border: solid 1px theme("colors.slate.400");
+    width: fit-content;
+    margin: 1rem;
+    border-radius: 1rem;
+    padding: 1%;
+    position: absolute;
+    top: 5rem;
   }
 </style>
