@@ -6,7 +6,6 @@
 Stage
 </section>
 
-
 <article class="screenshots">
 
 <section class="img-1">
