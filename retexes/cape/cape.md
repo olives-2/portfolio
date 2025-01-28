@@ -8,7 +8,7 @@ _Stage_
 
 <section class="section-screenshots">
 
-![Affichage d'un réseau avec un algorithme de simulation de force](/retexes/cape/cape_admin.webp)
+![Affichage d'un réseau avec un algorithme de simulation de force](/portfolio/retexes/cape/cape_admin.webp)
 
 </section>
 
