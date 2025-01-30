@@ -1,16 +1,18 @@
 # Application web
 
-## Catalogue de séries TB
+## Catalogue de séries TV
 
 <section class="type">
 BUT
 </section>
 
+<article class="retex-wrapper">
+
 <article class="screenshots">
 
-<section class="img-1">
+<section class="screenshot">
 
-![Page d'accueil de l'application](/portfolio/retexes/serizz/serizz.webp)
+![Page d'accueil de l'application](/retexes/serizz/serizz.webp)
 
 Page d'accueil de l'application
 
@@ -18,9 +20,9 @@ Page d'accueil de l'application
 
 </article>
 
-<article>
+<article class="content">
 
-<section class="section section-cahier-des-charges">
+<section class="text">
 
 ### Cahier des charges
 
@@ -30,18 +32,18 @@ Page d'accueil de l'application
 
 </section>
 
-<section class="section section-langages-et-methodes">
+<section class="text">
 
 ### Langages et méthodes
 
 - PHP Symfony, Tailwind
 - Méthodologie Agile SCRUM
-- Utilisation de GitLab pour gérer la complétion des US, suivi itération
+- Utilisation de GitLab pour gérer la complétion des US, suivi itération 
 - Gestion d'un dépôt Git en accord avec une gestion de projet Agile
 
 </section>
 
-<section class="section section-livres-et-livrables">
+<section class="text">
 
 ### Livrés et livrables
 
@@ -50,7 +52,7 @@ Page d'accueil de l'application
 
 </section>
 
-<section class="section section-competences-acquises">
+<section class="text">
 
 ### Compétences Acquises
 
@@ -60,5 +62,7 @@ Page d'accueil de l'application
 - Gestion d'un dépôt Git avec un GitLab en accord à une gestion agile
 
 </section>
+
+</article>
 
 </article>
