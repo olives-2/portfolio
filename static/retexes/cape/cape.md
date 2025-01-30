@@ -6,22 +6,32 @@
 Stage
 </section>
 
+<article class="retex-wrapper">
 
 <article class="screenshots">
 
-<section class="img-1">
+<section class="screenshot">
 
-![Affichage d'un réseau avec un algorithme de simulation de force](/portfolio/retexes/cape/cape_admin.webp)
+![Affichage d'un réseau avec un algorithme de simulation de force](cape_admin.webp)
 
 Affichage d'un réseau avec un algorithme de simulation de force
 
 </section>
 
+<section class="screenshot">
+
+![Affichage de tous les modules](cape_admin2.webp)
+
+Affichage d'un réseau avec un algorithme de simulation de force
+
+</section>
+
+
 </article>
 
-<article>
+<article class="content">
 
-<section class="section section-cahier-des-charges">
+<section class="text">
 
 ### Cahier des charges
 
@@ -31,7 +41,7 @@ Affichage d'un réseau avec un algorithme de simulation de force
 
 </section>
 
-<section class="section section-langages-et-methodes">
+<section class="text">
 
 ### Langages et méthodes
 
@@ -42,7 +52,7 @@ Affichage d'un réseau avec un algorithme de simulation de force
 
 </section>
 
-<section class="section section-livres-et-livrables">
+<section class="text">
 
 ### Livrés et livrables
 
@@ -51,7 +61,7 @@ Affichage d'un réseau avec un algorithme de simulation de force
 
 </section>
 
-<section class="section section-competences-acquises">
+<section class="text">
 
 ### Compétences Acquises
 
@@ -60,5 +70,7 @@ Affichage d'un réseau avec un algorithme de simulation de force
 - Étude d'une architecture réseau inédite
 
 </section>
+
+</article>
 
 </article>

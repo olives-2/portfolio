@@ -1,10 +1,10 @@
 <script>
-  let { title, description, img, link } = $props();
+  let { title, description, img, link, children } = $props();
 </script>
 
 <a
   href={link}
-  class="flex flex-col justify-center items-center rounded-2xl p-4 relative z-10 overflow-hidden shadow-sm w-4/12 h-4/12 border-2 border-slate-400 hover:border-white transition-all"
+  class="flex flex-col justify-center items-center rounded-2xl p-4 relative z-10 overflow-hidden drop-shadow-xl md:w-1/4 h-4/12 border-2 border-slate-400 hover:border-white transition-all"
 >
   <span
     id="color-layer"
@@ -14,6 +14,9 @@
   <div id="text" class="z-20">
     <h1 class="text-2xl text-center">{title}</h1>
     <h2 class="text-lg max-w-xl text-center">{description}</h2>
+  </div>
+  <div class="flex justify-center items-center gap-1">
+      {@render children?.()}
   </div>
 </a>
 
@@ -37,4 +40,5 @@
   a::after img {
     scale: 100%;
   }
+
 </style>

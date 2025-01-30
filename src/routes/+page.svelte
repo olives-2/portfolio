@@ -4,19 +4,21 @@
   import Skills from "$lib/components/Skills.svelte";
   import Title from "$lib/components/Title.svelte";
   import icons from "$lib/Icons.js";
+
+  const iconsClasses = "text-3xl bg-slate-700 p-2 rounded-xl drop-shadow-xl shadow-inner hover:bg-slate-500 overflow-hidden border-2 border-slate-700 hover:border-slate-400 duration-150"
 </script>
 
 <div class="flex justify-center">
   <div
     id="presentation"
-    class="flex justify-around items-center backdrop-blur-sm border border-slate-700 m-2 p-4 rounded-lg bg-slate-800 bg-opacity-50 w-11/12"
+    class="flex justify-around flex-col md:flex-row items-center backdrop-blur-sm border border-slate-700 m-2 p-4 rounded-lg bg-slate-800 bg-opacity-50 w-10/12"
   >
-    <article class="w-2/4">
-      <h1 class="text-6xl my-5">Matis Olives</h1>
-      <h2 class="text-3xl my-5">
+    <article class="md:w-2/4">
+      <h1 class="text-6xl p-2">Matis Olives</h1>
+      <h2 class="text-3xl p-2">
         Spécialisé dans le développement web et d'applications en POO
       </h2>
-      <p class="text-xl">
+      <p class="text-xl p-2">
         Je suis un étudiant d'informatique à l'IUT de Bordeaux-Gradignan. Dans
         cette formation, je réalise des missions me formant à des situations
         réelles du domaine de l'informatique.
@@ -25,7 +27,7 @@
     <img
       src={`${base}/img/me.webp`}
       alt="Portrait"
-      class="rounded-full w-64 relative drop-shadow-lg"
+      class="lazyload rounded-full w-64 relative drop-shadow-2xl"
     />
   </div>
 </div>
@@ -76,31 +78,35 @@
 <Title text="Retours d'expérience"></Title>
 
 <div id="retexes" class="flex flex-col p-2">
-  <div class="flex justify-center flex-wrap gap-2">
+  <div class="flex justify-center align-center flex-wrap flex-col md:flex-row gap-2">
     <RetexBanner
       title="Application d'administration"
       description="Développement d'une application d'administration de réseaux virtuels"
       link={`${base}/retex/cape`}
-      img={"/img/retexes/cape/screen1.webp"}
-    ></RetexBanner>
+      img={`${base}/retexes/cape/cape_admin.webp`}
+    >
+    <i class="nf nf-dev-svelte {iconsClasses}"></i>
+  </RetexBanner>
     <RetexBanner
       title="Application web"
       description="Répertoire de séries TV"
-      link="/retex/serizz"
-      img={"/img/retexes/serizz/serizz.webp"}
-    ></RetexBanner>
+      link={`${base}/retex/serizz`}
+      img={`${base}/retexes/serizz/serizz.webp`}
+    >
+    <i class="nf nf-md-symfony {iconsClasses}"></i>
+    <i class="nf nf-dev-mysql {iconsClasses}"></i>
+    <i class="nf nf-dev-tailwindcss {iconsClasses}"></i>
+  </RetexBanner>
     <RetexBanner
-      title="Application Python"
-      description="Portage d'un jeu de plateau en Python"
-      link="/retex/pandemic"
-      img={"/img/retexes/serizz/serizz.webp"}
-    ></RetexBanner>
-    <RetexBanner
-      title="Application C#"
-      description="Portage d'un jeu de plateau en C#"
-      link="/retex/csharp"
-      img={"/img/retexes/serizz/serizz.webp"}
-    ></RetexBanner>
+      title="Projet innovant"
+      description="Portage d'un jeu de plateau en application web"
+      link={`${base}/retex/cape`}
+      img={`${base}/retexes/living_forest/living_forest.webp`}
+    >
+    <i class="nf nf-dev-react {iconsClasses}"></i>
+    <i class="nf nf-dev-typescript {iconsClasses}"></i>
+    <i class="nf nf-md-nodejs {iconsClasses}"></i>
+  </RetexBanner>
   </div>
 </div>
 

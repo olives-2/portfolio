@@ -3,7 +3,7 @@
 </script>
 
 <div class="flex justify-center">
-  <div class="fixed flex justify-center m-auto top-0 z-10">
+  <div class="fixed flex justify-center z-10">
     <nav
       id="top-nav"
       class="m-2 gap-2 rounded-xl w-11/12 static flex justify-around items-center text-white bg-black border-2 bg-opacity-30 backdrop-blur-sm p-1"

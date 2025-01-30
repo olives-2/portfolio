@@ -9,7 +9,7 @@
       <Tooltip tip={icon.name} top>
         <a href={icon.link} target="_blank" aria-label="Lien vers {icon.name}">
           <i
-            class="{icon.class} tech-icon text-4xl bg-slate-700 p-2 rounded-xl shadow-black hover:bg-slate-500 duration-150"
+            class="{icon.class} tech-icon text-3xl bg-slate-700 p-2 rounded-xl drop-shadow-xl shadow-inner hover:bg-slate-500 overflow-hidden border-2 border-slate-700 hover:border-slate-400 duration-150"
           ></i>
         </a>
       </Tooltip>
@@ -18,13 +18,3 @@
 
   <h2>{description}</h2>
 </div>
-
-<style>
-  .tech-icon{
-    box-shadow: 5px 5px 0px #222;
-  }
-
-  .tech-icon:hover{
-    box-shadow: none;
-  }
-</style>

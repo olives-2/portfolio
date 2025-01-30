@@ -18,13 +18,27 @@
       console.error("Error loading Markdown:", err);
     }
   });
+
+  const renderer = new marked.Renderer();
+  const imagePrefix = `${base}/retexes/${data.slug}/`;
+
+  renderer.image = (tokens) => {
+    const href = tokens.href || "";
+    const title = tokens.title ? `title="${tokens.title}"` : "";
+    const alt = tokens.text ? `alt="${tokens.text}"` : 'alt=""';
+
+    const prefixedHref = href.startsWith("http") ? href : `${imagePrefix}${href}`;
+
+    return `<img src="${prefixedHref}" ${alt} ${title} />`;
+  };
+
 </script>
 
 {#if mdSource === ""}
   <p>Chargement...</p>
 {:else}
   <div class="markdown-wrapper">
-    {@html marked(mdSource)}
+    {@html marked(mdSource, { renderer })}
   </div>
 {/if}
 
@@ -39,44 +53,87 @@
   }
   .markdown-wrapper :global(h3) {
     font-size: 2rem;
+    text-align: center;
   }
   .markdown-wrapper :global(li) {
-    list-style: circle;
+    list-style: disc;
+    padding: 0.1rem;
   }
-  .markdown-wrapper :global(img) {
-    border-radius: 16px;
-    width: 25%;
-    margin: 2rem;
-  }
-  .markdown-wrapper :global(article) {
-    display: flex;
-    justify-content: center;
-    flex-flow: row wrap;
-  }
-  
-  .markdown-wrapper :global(.section) {
-    font-size: larger;
-    background-color: rgba(45, 55, 72, 0.8);
-    backdrop-filter: theme("blur.md");
-    border: solid 1px theme("colors.slate.400");
-    width: 20%;
-    margin: 1rem;
-    border-radius: 1rem;
-    padding: 1%;
-  }
-  .markdown-wrapper :global(.type) {
+
+  .markdown-wrapper :global(.retex-wrapper) {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: larger;
-    background-color: rgba(45, 55, 72, 0.8);
-    backdrop-filter: theme("blur.md");
-    border: solid 1px theme("colors.slate.400");
-    width: fit-content;
-    margin: 1rem;
-    border-radius: 1rem;
-    padding: 1%;
-    position: absolute;
-    top: 5rem;
+    padding: 1rem;
+    width: 100%;
+  }
+
+  .markdown-wrapper :global(p) {
+    display: inline;
+    box-sizing: content-box;
+  }
+
+  .markdown-wrapper :global(.content) {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
+  }
+
+  .markdown-wrapper :global(.screenshots) {
+    display: flex;
+    flex-flow: row wrap;
+    width: 50%;
+    gap: 1rem;
+  }
+
+  .markdown-wrapper :global(.screenshot) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .markdown-wrapper :global(.screenshot p) {
+    display: inline;
+    width: 50%;
+  }
+
+  .markdown-wrapper :global(img) {
+    border-radius: 16px;
+    width: 100%;
+    border: solid 2px theme("colors.slate.600");
+  }
+
+  .markdown-wrapper :global(.text) {
+    background-color: theme("colors.slate.800");
+    border-radius: theme("borderRadius.3xl");
+    padding: 1rem;
+    border: solid 2px theme("colors.slate.600");
+  }
+
+  @media (max-width: 1000px) {
+    .markdown-wrapper :global(.retex-wrapper) {
+      flex-flow: column wrap;
+    }
+
+    .markdown-wrapper :global(.content) {
+      grid-template-columns: 1fr;
+      grid-column-gap: 1rem;
+      grid-row-gap: 1rem;
+      width: 75%;
+    }
+
+    .markdown-wrapper :global(.screenshots) {
+      width: 85%;
+      flex-flow: column wrap;
+    }
+
+    .markdown-wrapper :global(.screenshot p) {
+      display: inline;
+      width: 100%;
+    }
   }
 </style>
