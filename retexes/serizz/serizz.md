@@ -12,7 +12,7 @@ BUT
 
 <section class="screenshot">
 
-![Page d'accueil de l'application](/retexes/serizz/serizz.webp)
+![Page d'accueil de l'application](/portfolio/retexes/serizz/serizz.webp)
 
 Page d'accueil de l'application
 
