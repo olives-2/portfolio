@@ -44,9 +44,11 @@
 </div>
 {/if}
 
+
 <style lang="postcss">
   .markdown-wrapper :global(h1) {
     font-size: 2.5rem;
+    margin: 0%;
     text-align: center;
   }
 
@@ -119,12 +121,6 @@
     border: solid 2px theme("colors.slate.600");
   }
 
-  .markdown-wrapper :global(.type) {
-    width: fit-content;
-    position: relative;
-    left: 50%;
-  }
-
   @media (max-width: 1000px) {
     .markdown-wrapper :global(.retex-wrapper) {
       flex-flow: column wrap;
@@ -146,5 +142,6 @@
       display: inline;
       width: 100%;
     }
+
   }
 </style>

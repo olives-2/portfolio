@@ -2,9 +2,9 @@ export const iconsClasses = "block text-3xl bg-slate-700 p-2 rounded-xl drop-sha
 
 export const icons = {
     webIcons: [
-        { name: "HTML", class: "iconify icon-[simple-icons--github]" },
-        { name: "CSS", class: "iconify icon-[simple-icons--html5]" },
-        { name: "JavaScript", class: "iconify icon-[simple-icons--css3]" },
+        { name: "HTML", class: "iconify icon-[simple-icons--html5]" },
+        { name: "CSS", class: "iconify icon-[simple-icons--css3]" },
+        { name: "JavaScript", class: "iconify icon-[simple-icons--javascript]" },
         { name: "React", class: "iconify icon-[simple-icons--react]", link: "https://fr.react.dev/" },
         { name: "Svelte", class: "iconify icon-[simple-icons--svelte]", link: "https://svelte.dev/" },
         {

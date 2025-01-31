@@ -1,10 +1,6 @@
 # Application web
 
-## Administration de réseaux virtuels
-
-<section class="type">
-Stage
-</section>
+## Administration de réseaux virtuels <span class="bg-slate-700 rounded-full inline"><span class="icon-[material-symbols--2k-plus-outline] inline"></span></span>
 
 <article class="retex-wrapper">
 
