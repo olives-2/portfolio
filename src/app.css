@@ -1,5 +1,10 @@
-@import url("https://www.nerdfonts.com/assets/css/webfont.css");
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    a{
+        color: theme("colors.slate.400");
+    }
+ }
+ 

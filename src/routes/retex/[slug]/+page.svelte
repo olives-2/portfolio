@@ -3,6 +3,7 @@
   import { marked } from "marked";
   import { onMount } from "svelte";
   import { goto } from "$app/navigation";
+  import Loader from "$lib/components/Loader.svelte";
   export let data;
   let mdSource = "";
 
@@ -27,34 +28,38 @@
     const title = tokens.title ? `title="${tokens.title}"` : "";
     const alt = tokens.text ? `alt="${tokens.text}"` : 'alt=""';
 
-    const prefixedHref = href.startsWith("http") ? href : `${imagePrefix}${href}`;
+    const prefixedHref = href.startsWith("http")
+      ? href
+      : `${imagePrefix}${href}`;
 
     return `<img src="${prefixedHref}" ${alt} ${title} />`;
   };
-
 </script>
 
 {#if mdSource === ""}
-  <p>Chargement...</p>
+  <Loader/>
 {:else}
-  <div class="markdown-wrapper">
-    {@html marked(mdSource, { renderer })}
-  </div>
+<div class="markdown-wrapper">
+  {@html marked(mdSource, { renderer })}
+</div>
 {/if}
 
-<style lang="post-css">
+<style lang="postcss">
   .markdown-wrapper :global(h1) {
     font-size: 2.5rem;
     text-align: center;
   }
+
   .markdown-wrapper :global(h2) {
     font-size: 2rem;
     text-align: center;
   }
+
   .markdown-wrapper :global(h3) {
     font-size: 2rem;
     text-align: center;
   }
+
   .markdown-wrapper :global(li) {
     list-style: disc;
     padding: 0.1rem;
@@ -65,7 +70,6 @@
     justify-content: center;
     align-items: center;
     padding: 1rem;
-    width: 100%;
   }
 
   .markdown-wrapper :global(p) {
@@ -83,7 +87,8 @@
   .markdown-wrapper :global(.screenshots) {
     display: flex;
     flex-flow: row wrap;
-    width: 50%;
+    width: 75%;
+    height: 100%;
     gap: 1rem;
   }
 
@@ -103,15 +108,21 @@
 
   .markdown-wrapper :global(img) {
     border-radius: 16px;
-    width: 100%;
     border: solid 2px theme("colors.slate.600");
   }
 
-  .markdown-wrapper :global(.text) {
+  .markdown-wrapper :global(.text),
+  .markdown-wrapper :global(.type) {
     background-color: theme("colors.slate.800");
     border-radius: theme("borderRadius.3xl");
     padding: 1rem;
     border: solid 2px theme("colors.slate.600");
+  }
+
+  .markdown-wrapper :global(.type) {
+    width: fit-content;
+    position: relative;
+    left: 50%;
   }
 
   @media (max-width: 1000px) {

@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const { addDynamicIconSelectors } = require("@iconify/tailwind");
+
 export default {
   content: ['./src/**/*.{html,js,svelte,ts}'],
   theme: {
@@ -52,5 +54,5 @@ export default {
       }
     }
   },
-  plugins: []
+  plugins: [addDynamicIconSelectors({ scale: 1, square: true, })]
 };

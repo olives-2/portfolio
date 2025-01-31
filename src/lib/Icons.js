@@ -1,51 +1,49 @@
-const icons = {
+export const iconsClasses = "block text-3xl bg-slate-700 p-2 rounded-xl drop-shadow-xl shadow-inner hover:bg-slate-500 border-2 border-slate-500 hover:border-slate-400 duration-150 text-slate-100"
+
+export const icons = {
     webIcons: [
-        { name: "HTML", class: "nf nf-dev-html5" },
-        { name: "CSS", class: "nf nf-dev-css3" },
-        { name: "JavaScript", class: "nf nf-dev-javascript" },
-        { name: "React", class: "nf nf-dev-react", link: "https://fr.react.dev/" },
-        { name: "Svelte", class: "nf nf-seti-svelte", link: "https://svelte.dev/" },
+        { name: "HTML", class: "iconify icon-[simple-icons--github]" },
+        { name: "CSS", class: "iconify icon-[simple-icons--html5]" },
+        { name: "JavaScript", class: "iconify icon-[simple-icons--css3]" },
+        { name: "React", class: "iconify icon-[simple-icons--react]", link: "https://fr.react.dev/" },
+        { name: "Svelte", class: "iconify icon-[simple-icons--svelte]", link: "https://svelte.dev/" },
         {
             name: "Tailwind",
-            class: "nf nf-md-tailwind",
+            class: "iconify icon-[simple-icons--tailwindcss]",
             link: "https://tailwindcss.com/",
         },
-        { name: "PHP", class: "nf nf-dev-php" },
+        { name: "PHP", class: "iconify icon-[simple-icons--php]" },
         {
             name: "Symfony",
-            class: "nf nf-dev-symfony",
+            class: "nf iconify icon-[simple-icons--symfony]",
             link: "https://symfony.com/",
         },
     ],
     javaIcons: [
-        { name: "Java", class: "nf nf-dev-java" },
-        { name: "Android Studio", class: "nf nf-dev-android" },
-        { name: "Maven", class: "nf nf-seti-maven" },
+        { name: "Java", class: "iconify icon-[devicon-plain--java]" },
+        { name: "Android Studio", class: "iconify icon-[simple-icons--android]" },
+        { name: "Maven", class: "iconify icon-[simple-icons--apachemaven]" },
     ],
     dbIcons: [
-        { name: "Bases de données relationnelles (Oracle, Microsoft SQL Server)", class: "nf nf-fa-database" },
-        { name: "Oracle SQL", class: "nf nf-dev-oracle" },        
-        { name: "MongoDB", class: "nf nf-dev-mongodb" },
-        { name: "Neo4J", class: "nf nf-dev-neo4j" }
+        { name: "Oracle SQL", class: "iconify icon-[simple-icons--oracle]" },
+        { name: "MongoDB", class: "iconify icon-[simple-icons--mongodb]" },
+        { name: "Neo4J", class: "iconify icon-[simple-icons--neo4j]" }
 
     ],
     pythonIcons: [
-        { name: "Python", class: "nf nf-dev-python" },
-        { name: "Matplotlib", class: "nf nf-dev-matplotlib" },
-        { name: "Pandas", class: "nf nf-dev-pandas" }
-
+        { name: "Python", class: "iconify icon-[simple-icons--python]" },
+        { name: "Matplotlib", class: "iconify icon-[devicon-plain--matplotlib]" },
+        { name: "Pandas", class: "iconify icon-[simple-icons--pandas]" }
     ],
     sysIcons: [
-        { name: "C", class: "nf nf-custom-c" },
-        { name: "Linux", class: "nf nf-dev-linux" },
-        { name: "Bash et ZSH", class: "nf nf-cod-terminal_bash" }
+        { name: "C", class: "iconify icon-[simple-icons--c]" },
+        { name: "Linux", class: "iconify icon-[simple-icons--linux]" },
+        { name: "Bash et ZSH", class: "iconify icon-[simple-icons--gnubash]" }
     ],
     deploymentIcons: [
-        { name: "Docker", class: "nf nf-fa-docker" },
-        { name: "Podman", class: "nf nf-dev-podman" },
-        { name: "GitLab CI/CD", class: "nf nf-fa-gitlab" },
-        { name: "Sonarqube", class: "nf nf-dev-sonarqube" }
+        { name: "Docker", class: "iconify icon-[simple-icons--docker]" },
+        { name: "Podman", class: "iconify icon-[simple-icons--podman]" },
+        { name: "GitLab CI/CD", class: "iconify icon-[simple-icons--gitlab]" },
+        { name: "Sonarqube", class: "iconify icon-[simple-icons--sonarqube]" }
     ],
 }
-
-export default icons

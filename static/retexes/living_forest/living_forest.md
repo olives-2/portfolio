@@ -1,26 +1,28 @@
 # Application web
 
-## Catalogue de séries TB
+## Administration de réseaux virtuels
 
 <section class="type">
-BUT
+Stage
 </section>
+
+<article class="retex-wrapper">
 
 <article class="screenshots">
 
-<section class="img-1">
+<section class="screenshot">
 
-![Début d'une partie](/portfolio/retexes/cape/cape_admin.webp)
+![Affichage d'un réseau avec un algorithme de simulation de force](living_forest.webp)
 
-Début d'une partie
+Affichage d'un réseau avec un algorithme de simulation de force
 
 </section>
 
 </article>
 
-<article>
+<article class="content">
 
-<section class="section section-cahier-des-charges">
+<section class="text">
 
 ### Cahier des charges
 
@@ -29,16 +31,17 @@ Début d'une partie
 
 </section>
 
-<section class="section section-langages-et-methodes">
+<section class="text">
 
 ### Langages et méthodes
 
 - React, Typescript, Node.js
 - Transposition des fonctionnalités du jeu en issues GitLab
 
+
 </section>
 
-<section class="section section-livres-et-livrables">
+<section class="text">
 
 ### Livrés et livrables
 
@@ -48,7 +51,7 @@ Début d'une partie
 
 </section>
 
-<section class="section section-competences-acquises">
+<section class="text">
 
 ### Compétences Acquises
 
@@ -56,5 +59,7 @@ Début d'une partie
 - Approfondissement de React et Typescript
 
 </section>
+
+</article>
 
 </article>

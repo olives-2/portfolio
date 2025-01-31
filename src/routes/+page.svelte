@@ -3,15 +3,14 @@
   import RetexBanner from "$lib/components/RetexBanner.svelte";
   import Skills from "$lib/components/Skills.svelte";
   import Title from "$lib/components/Title.svelte";
-  import icons from "$lib/Icons.js";
-
-  const iconsClasses = "text-3xl bg-slate-700 p-2 rounded-xl drop-shadow-xl shadow-inner hover:bg-slate-500 overflow-hidden border-2 border-slate-700 hover:border-slate-400 duration-150"
+  import { icons, iconsClasses } from "$lib/Icons.js";
 </script>
+
 
 <div class="flex justify-center">
   <div
     id="presentation"
-    class="flex justify-around flex-col md:flex-row items-center backdrop-blur-sm border border-slate-700 m-2 p-4 rounded-lg bg-slate-800 bg-opacity-50 w-10/12"
+    class="flex justify-between flex-col md:flex-row items-center backdrop-blur-sm border border-slate-700 m-2 p-4 rounded-lg bg-slate-800 bg-opacity-50 md:w-8/12"
   >
     <article class="md:w-2/4">
       <h1 class="text-6xl p-2">Matis Olives</h1>
@@ -27,7 +26,7 @@
     <img
       src={`${base}/img/me.webp`}
       alt="Portrait"
-      class="lazyload rounded-full w-64 relative drop-shadow-2xl"
+      class="rounded-full relative drop-shadow-2xl border-slate-400 border-2 w-5/12"
     />
   </div>
 </div>
@@ -39,38 +38,26 @@
     <Skills
       description="Création de sites web pour développement fullstack"
       icons={icons.webIcons}
-      bgColor="bg-slate-800"
-      borderColor="bg-slate-700"
     ></Skills>
     <Skills
       description="Utilisation de différents SGBD relationels et NoSQL pour créer, utiliser et administrer des bases de données"
       icons={icons.dbIcons}
-      bgColor="bg-slate-800"
-      borderColor="bg-slate-700"
     ></Skills>
     <Skills
       description="Développement de logiciels en Java et d'applications Android"
       icons={icons.javaIcons}
-      bgColor="bg-slate-800"
-      borderColor="bg-slate-700"
     ></Skills>
     <Skills
       description=" Utilisation de Python pour analyse de données statistiques"
       icons={icons.pythonIcons}
-      bgColor="bg-slate-800"
-      borderColor="bg-slate-700"
     ></Skills>
     <Skills
       description="Développement d'outils système et de scripts Bash"
       icons={icons.sysIcons}
-      bgColor="bg-slate-800"
-      borderColor="bg-slate-700"
     ></Skills>
     <Skills
       description="Utilisation d'outils de virtualisation pour l'intégration et le déploiement continus"
       icons={icons.deploymentIcons}
-      bgColor="bg-slate-800"
-      borderColor="bg-slate-700"
     ></Skills>
   </div>
 </div>
@@ -78,42 +65,70 @@
 <Title text="Retours d'expérience"></Title>
 
 <div id="retexes" class="flex flex-col p-2">
-  <div class="flex justify-center align-center flex-wrap flex-col md:flex-row gap-2">
+  <div
+    class="flex justify-center align-center flex-wrap flex-col md:flex-row gap-2"
+  >
     <RetexBanner
       title="Application d'administration"
       description="Développement d'une application d'administration de réseaux virtuels"
       link={`${base}/retex/cape`}
       img={`${base}/retexes/cape/cape_admin.webp`}
     >
-    <i class="nf nf-dev-svelte {iconsClasses}"></i>
-  </RetexBanner>
+      <div class={iconsClasses}>
+        <i class="iconify icon-[simple-icons--svelte] block"></i>
+      </div>
+      <div class={iconsClasses}>
+        <i class="iconify icon-[simple-icons--javascript] block"></i>
+      </div>
+    </RetexBanner>
     <RetexBanner
       title="Application web"
       description="Répertoire de séries TV"
       link={`${base}/retex/serizz`}
       img={`${base}/retexes/serizz/serizz.webp`}
     >
-    <i class="nf nf-md-symfony {iconsClasses}"></i>
-    <i class="nf nf-dev-mysql {iconsClasses}"></i>
-    <i class="nf nf-dev-tailwindcss {iconsClasses}"></i>
-  </RetexBanner>
+      <div class={iconsClasses}>
+        <i class="iconify icon-[simple-icons--symfony] block"></i>
+      </div>
+      <div class={iconsClasses}>
+        <i class="iconify icon-[simple-icons--mysql] block"></i>
+      </div>
+      <div class={iconsClasses}>
+        <i class="iconify icon-[simple-icons--tailwindcss] block"></i>
+      </div>
+    </RetexBanner>
     <RetexBanner
       title="Projet innovant"
       description="Portage d'un jeu de plateau en application web"
-      link={`${base}/retex/cape`}
+      link={`${base}/retex/living_forest`}
       img={`${base}/retexes/living_forest/living_forest.webp`}
     >
-    <i class="nf nf-dev-react {iconsClasses}"></i>
-    <i class="nf nf-dev-typescript {iconsClasses}"></i>
-    <i class="nf nf-md-nodejs {iconsClasses}"></i>
-  </RetexBanner>
+      <div class={iconsClasses}>
+        <i class="iconify icon-[simple-icons--react] block"></i>
+      </div>
+      <div class={iconsClasses}>
+        <i class="iconify icon-[simple-icons--typescript] block"></i>
+      </div>
+      <div class={iconsClasses}>
+        <i class="iconify icon-[devicon-plain--nodejs] block"></i>
+      </div>
+    </RetexBanner>
   </div>
 </div>
 
 <Title text="Contact et liens"></Title>
 
 <div id="contact" class="flex m-5 justify-center items-center gap-10">
-  <a href="https://www.linkedin.com/in/matis-olives-4b845629a/" aria-label="Lien vers mon LinkedIn" class="w-10"><i class="nf nf-dev-linkedin text-4xl inline-block"></i></a>
-  <a href="mailto:matisolives@gmail.com" aria-label="M'envoyer un mail" class="w-10"><i class="nf nf-cod-mail text-4xl inline-block"></i></a>
+  <a
+    href="https://www.linkedin.com/in/matis-olives-4b845629a/"
+    aria-label="Lien vers mon LinkedIn"
+    class={iconsClasses}
+  >
+      <i class="iconify icon-[simple-icons--linkedin] block"></i>
+  </a>
+  <a
+    href="mailto:matisolives@gmail.com"
+    aria-label="M'envoyer un mail"
+    class={iconsClasses}><i class="iconify icon-[material-symbols--mail-rounded] block"></i></a
+  >
 </div>
-
