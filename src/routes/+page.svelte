@@ -1,6 +1,8 @@
 <script>
     import { base } from "$app/paths";
     import RetexBanner from "$lib/components/RetexBanner.svelte";
+    import RetexesSort from "$lib/components/Retexes.svelte";
+    import Retexes from "$lib/components/Retexes.svelte";
     import Skills from "$lib/components/Skills.svelte";
     import Title from "$lib/components/Title.svelte";
     import { icons, iconsClasses } from "$lib/Icons.js";
@@ -73,69 +75,38 @@
 <Title text="Projets"></Title>
 
 <div id="retexes" class="p-2">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
-        <RetexBanner
-            title="Application d'administration"
-            description="Développement d'une application d'administration de réseaux virtuels"
-            link={`${base}/retex/cape`}
-            img={`${base}/retexes/cape/cape_admin.webp`}
-        >
-            <div class={iconsClasses}>
-                <i class="iconify icon-[simple-icons--svelte] block"></i>
-            </div>
-            <div class={iconsClasses}>
-                <i class="iconify icon-[simple-icons--javascript] block"></i>
-            </div>
-        </RetexBanner>
-        <RetexBanner
-            title="Application web"
-            description="Répertoire de séries TV"
-            link={`${base}/retex/serizz`}
-            img={`${base}/retexes/serizz/serizz.webp`}
-        >
-            <div class={iconsClasses}>
-                <i class="iconify icon-[simple-icons--symfony] block"></i>
-            </div>
-            <div class={iconsClasses}>
-                <i class="iconify icon-[simple-icons--mysql] block"></i>
-            </div>
-            <div class={iconsClasses}>
-                <i class="iconify icon-[simple-icons--tailwindcss] block"></i>
-            </div>
-        </RetexBanner>
-        <RetexBanner
-            title="Projet innovant"
-            description="Portage d'un jeu de plateau en application web"
-            link={`${base}/retex/living_forest`}
-            img={`${base}/retexes/living_forest/living_forest.webp`}
-        >
-            <div class={iconsClasses}>
-                <i class="iconify icon-[simple-icons--react] block"></i>
-            </div>
-            <div class={iconsClasses}>
-                <i class="iconify icon-[simple-icons--typescript] block"></i>
-            </div>
-            <div class={iconsClasses}>
-                <i class="iconify icon-[devicon-plain--nodejs] block"></i>
-            </div>
-        </RetexBanner>
-    </div>
+    <Retexes></Retexes>
 </div>
 
 <Title text="Contacts et liens"></Title>
 
-<div id="contact" class="flex p-2 justify-center items-center gap-10">
-    <a
-        href="https://www.linkedin.com/in/matis-olives-4b845629a/"
-        aria-label="Lien vers mon LinkedIn"
-        class={iconsClasses}
-    >
-        <i class="iconify icon-[simple-icons--linkedin] block"></i>
-    </a>
-    <a
-        href="mailto:matisolives@gmail.com"
-        aria-label="M'envoyer un mail"
-        class={iconsClasses}
-        ><i class="iconify icon-[material-symbols--mail-rounded] block"></i></a
-    >
+<div class="p-4" id="contact">
+    <div class="flex p-4 justify-center items-center gap-10">
+        <a
+            href="https://www.linkedin.com/in/matis-olives-4b845629a/"
+            aria-label="Lien vers mon LinkedIn"
+            class={iconsClasses}
+            target="_blank"
+        >
+            <i class="iconify icon-[simple-icons--linkedin] block"></i>
+        </a>
+        <a
+            href="mailto:matisolives@gmail.com"
+            aria-label="M'envoyer un mail"
+            class={iconsClasses}
+            target="_blank"
+            ><i class="iconify icon-[material-symbols--mail-rounded] block"
+            ></i></a
+        >
+    </div>
+
+    <div class="flex justify-center">
+        <a
+            href={`${base}/assets/CV_Matis_Olives.pdf`}
+            target="_blank"
+            class="text-white text-xl p-2 bg-slate-800 border-2 border-slate-600 rounded-lg shadow-xl hover:bg-slate-600 hover:border-slate-400 transition-colors flex items-center"
+        >
+            <span class="icon-[pepicons-print--cv]"></span> Télécharger mon CV</a
+        >
+    </div>
 </div>

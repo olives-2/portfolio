@@ -1,5 +1,5 @@
 export const iconsClasses =
-    "block text-3xl bg-slate-700 p-2 rounded-xl drop-shadow-xl shadow-inner hover:bg-slate-500 border-2 border-slate-500 hover:border-slate-400 duration-150 text-slate-100";
+    "block text-3xl bg-slate-700 p-2 rounded-xl drop-shadow-xl shadow-inner hover:bg-slate-500 border-2 border-slate-500 hover:border-slate-400 duration-150 text-white";
 
 export const icons = {
     webIcons: [

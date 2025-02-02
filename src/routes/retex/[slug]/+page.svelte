@@ -1,28 +1,9 @@
 <script>
     import { base } from "$app/paths";
     import { marked } from "marked";
-    import { onMount } from "svelte";
-    import { goto } from "$app/navigation";
     import Loader from "$lib/components/Loader.svelte";
     export let data;
-    let mdSource = "";
-
-    onMount(async () => {
-        try {
-            const res = await fetch(
-                `${base}/retexes/${data.slug}/${data.slug}.md`,
-            );
-            if (!res.ok) {
-                throw new Error(
-                    `Failed to load file: ${res.status} ${res.statusText}`,
-                );
-            }
-            mdSource = await res.text();
-        } catch (err) {
-            goto(`${base}/404`);
-            console.error("Error loading Markdown:", err);
-        }
-    });
+    let mdSource = data.mdSource;
 
     const renderer = new marked.Renderer();
     const imagePrefix = `${base}/retexes/${data.slug}/`;
@@ -40,17 +21,10 @@
     };
 </script>
 
-<noscript>
-    <h1>
-        À cause de choix techniques, les projets ne sont pas accessibles avec
-        JavaScript désactivé
-    </h1>
-</noscript>
-
 {#if mdSource === ""}
     <Loader />
 {:else}
-    <div class="markdown-wrapper">
+    <div class="markdown-wrapper h-full">
         {@html marked(mdSource, { renderer })}
     </div>
 {/if}
@@ -102,7 +76,6 @@
 
     .markdown-wrapper :global(.screenshots) {
         display: flex;
-        flex-flow: column wrap;
         gap: 1rem;
     }
 
@@ -113,11 +86,6 @@
         align-items: center;
         flex-flow: row wrap;
         gap: 1rem;
-    }
-
-    .markdown-wrapper :global(.screenshot img) {
-        width: 100%;
-        height: 100%;
     }
 
     .markdown-wrapper :global(.screenshot p) {
@@ -140,7 +108,10 @@
 
     @media (max-width: 895px) {
         .markdown-wrapper :global(.content) {
-            grid-template-columns: 1fr ;
+            grid-template-columns: 1fr;
+        }
+        .markdown-wrapper :global(.screenshots) {
+            flex-flow: row wrap;
         }
     }
 </style>

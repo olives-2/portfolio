@@ -15,7 +15,7 @@ class="gradient text-white flex flex-col min-h-full bg-gradient-to-br from-blue-
 <Nav></Nav>
 <div class="mb-16"></div>
 {#key data.url}
-<div in:slide={{ duration: 200, easing: cubicInOut }} out:slide={{ duration: 200, easing: cubicInOut }} class="z-10">
+<div in:slide={{ duration: 200, easing: cubicInOut }} out:slide={{ duration: 200, easing: cubicInOut }} class="z-10 p-2 min-h-full">
   {@render children?.()}
 </div>
 {/key}
