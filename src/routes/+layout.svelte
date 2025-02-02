@@ -10,7 +10,7 @@
 
 
 <div
-class="gradient text-white flex flex-col min-h-full bg-gradient-to-br from-blue-800 to-red-800 animate-gradient relative overflow-hidden"
+class="gradient text-white flex flex-col min-h-full bg-gradient-to-br from-blue-700 to-blue-900 animate-gradient relative overflow-hidden"
 >
 <Nav></Nav>
 <div class="mb-16"></div>
@@ -39,7 +39,4 @@ class="gradient text-white flex flex-col min-h-full bg-gradient-to-br from-blue-
     }
   }
 
-  .gradient {
-    background-size: 400% 400%;
-  }
 </style>

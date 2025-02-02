@@ -1,10 +1,6 @@
 # Application web
 
-## Administration de réseaux virtuels
-
-<section class="type">
-Stage
-</section>
+## Portage d'un jeu de plateau
 
 <article class="retex-wrapper">
 
@@ -12,7 +8,7 @@ Stage
 
 <section class="screenshot">
 
-![Affichage d'un réseau avec un algorithme de simulation de force](living_forest.webp)
+![Début de partie](living_forest.webp)
 
 Affichage d'un réseau avec un algorithme de simulation de force
 
@@ -37,7 +33,6 @@ Affichage d'un réseau avec un algorithme de simulation de force
 
 - React, Typescript, Node.js
 - Transposition des fonctionnalités du jeu en issues GitLab
-
 
 </section>
 

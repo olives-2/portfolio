@@ -2,10 +2,6 @@
 
 ## Catalogue de séries TV
 
-<section class="type">
-BUT
-</section>
-
 <article class="retex-wrapper">
 
 <article class="screenshots">
@@ -38,7 +34,7 @@ Page d'accueil de l'application
 
 - PHP Symfony, Tailwind
 - Méthodologie Agile SCRUM
-- Utilisation de GitLab pour gérer la complétion des US, suivi itération 
+- Utilisation de GitLab pour gérer la complétion des US, suivi itération
 - Gestion d'un dépôt Git en accord avec une gestion de projet Agile
 
 </section>

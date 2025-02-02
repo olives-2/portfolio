@@ -1,6 +1,6 @@
 # Application web
 
-## Administration de réseaux virtuels <span class="bg-slate-700 rounded-full inline"><span class="icon-[material-symbols--2k-plus-outline] inline"></span></span>
+## Administration de réseaux virtuels
 
 <article class="retex-wrapper">
 
@@ -21,7 +21,6 @@ Affichage d'un réseau avec un algorithme de simulation de force
 Affichage d'un réseau avec un algorithme de simulation de force
 
 </section>
-
 
 </article>
 

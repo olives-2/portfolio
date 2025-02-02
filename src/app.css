@@ -3,8 +3,7 @@
 @tailwind utilities;
 
 @layer base {
-    a{
+    a {
         color: theme("colors.slate.400");
     }
- }
- 
+}
