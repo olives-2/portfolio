@@ -10,7 +10,7 @@
 
 ![Début de partie](living_forest.webp)
 
-Affichage d'un réseau avec un algorithme de simulation de force
+Début de partie
 
 </section>
 
