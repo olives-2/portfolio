@@ -14,7 +14,7 @@
     href={link}
     class="rounded-2xl max-h-64 relative z-10 overflow-hidden drop-shadow-xl border-2 border-slate-400 hover:border-white transition-all text-slate-100"
 >
-    <span class="{iconsClasses} absolute m-1">
+    <span class="{iconsClasses} absolute m-1 z-10">
         <i class="{typeIcon} block"></i>
     </span>
     <span
@@ -27,7 +27,7 @@
     <div class="flex flex-col justify-around p-2 gap-4 bg-slate-800  h-3/5">
         <div class="flex justify-between">
             <div>
-                <h1 class="text-lg">{title}</h1>
+                <h1 class="text-xl font-bold">{title}</h1>
                 <h2 class="text-md">{description}</h2>
             </div>
             <div class="flex justify-center items-center gap-1">

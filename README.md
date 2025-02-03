@@ -1,38 +1,27 @@
-# sv
+# portfolio
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+![Last commit](https://img.shields.io/github/last-commit/olives-2/portfolio/main)
 
-## Creating a project
+This repo contains my portfolio website, made with SvelteKit and Tailwind CSS.
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Run locally
 
-```bash
-# create a new project in the current directory
-npx sv create
+To run the site locally, install `yarn`:
 
-# create a new project in my-app
-npx sv create my-app
-```
+`npm install -G yarn`
 
-## Developing
+Install the dependencies:
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+`yarn install`
 
-```bash
-npm run dev
+Then, run the script:
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+`yarn run dev`
 
-## Building
+## Deploy
 
-To create a production version of your app:
+To deploy the site (if anyone else than me ever can...), run:
 
-```bash
-npm run build
-```
+`yarn run deploy`
 
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+This will use the static SvelteKit adapter and use gh-actions to deploy the site.

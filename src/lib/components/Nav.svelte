@@ -1,7 +1,7 @@
 <script>
   import { base } from "$app/paths";
   const buttonStyle =
-    "hover:bg-blue-700 p-2 rounded-lg h-full flex justify-center items-center w-48 nav-button text-slate-100";
+    "hover:bg-blue-700 p-2 rounded-lg h-full flex justify-center items-center w-full transition-colors nav-button text-slate-100";
 </script>
 
 <div class="flex justify-center">
@@ -24,9 +24,3 @@
     </nav>
   </div>
 </div>
-
-<style lang="postcss">
-  .nav-button {
-    transition: all 0.2s cubic-bezier(0.41, 0.22, 0.05, 0.93);
-  }
-</style>

@@ -2,8 +2,20 @@
     import { base } from "$app/paths";
     import { marked } from "marked";
     import Loader from "$lib/components/Loader.svelte";
+    import { goto } from "$app/navigation";
+    import { onMount } from "svelte";
     export let data;
-    let mdSource = data.mdSource;
+
+    // The 404 page doesn't display if it is called from the server
+    let mdSource = "";
+    
+    onMount(async () => {
+        const res = await fetch(`${base}/retexes/${data.slug}/${data.slug}.md`);
+        if (!res.ok) {
+            goto(`${base}/404`);
+        }
+        mdSource = await res.text();
+    })
 
     const renderer = new marked.Renderer();
     const imagePrefix = `${base}/retexes/${data.slug}/`;
@@ -55,16 +67,10 @@
 
     .markdown-wrapper :global(.retex-wrapper) {
         display: flex;
-        flex-flow: column wrap;
+        flex-flow: row ;
         justify-content: center;
         align-items: center;
-        padding: theme("padding.2");
         gap: theme("gap.8");
-    }
-
-    .markdown-wrapper :global(p) {
-        display: inline;
-        box-sizing: content-box;
     }
 
     .markdown-wrapper :global(.content) {
@@ -76,21 +82,20 @@
 
     .markdown-wrapper :global(.screenshots) {
         display: flex;
-        gap: 1rem;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        width: 45%;
+        gap: theme("gap.4");
     }
 
     .markdown-wrapper :global(.screenshot) {
-        display: flex;
-        justify-content: center;
+        width: 60%;
         text-align: center;
-        align-items: center;
-        flex-flow: row wrap;
-        gap: 1rem;
     }
 
     .markdown-wrapper :global(.screenshot p) {
         display: inline;
-        width: 50%;
     }
 
     .markdown-wrapper :global(img) {
@@ -107,11 +112,15 @@
     }
 
     @media (max-width: 895px) {
+
+        .markdown-wrapper :global(.retex-wrapper){
+            flex-flow: row wrap;
+        }
         .markdown-wrapper :global(.content) {
             grid-template-columns: 1fr;
         }
         .markdown-wrapper :global(.screenshots) {
-            flex-flow: row wrap;
+            flex-flow: column wrap;
         }
     }
 </style>

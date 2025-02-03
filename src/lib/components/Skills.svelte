@@ -1,23 +1,39 @@
+
 <script>
-  import Tooltip from "sv-tooltip";
-  import { iconsClasses } from "$lib/Icons";
-  let { title, description, icons } = $props();
+    import SkillsBanner from "./SkillsBanner.svelte";
+    import { icons } from "$lib/Icons";
 </script>
-
-<div class="rounded-xl border border-slate-400 bg-slate-800 p-4 flex justify-around flex-col items-center gap-4 max-w-96 bg-opacity-50">
-  <h1 class="text-3xl font-bold">{title}</h1>
-  <div class="flex justify-center flex-wrap gap-4 place-items-center">
-    {#each icons as icon}
-      <Tooltip tip={icon.name} top>
-        <a href={icon.link} target="_blank" aria-label="Lien vers {icon.name}" class={iconsClasses}>
-          <i
-            class="{icon.class} m-0 p-0 block"
-          ></i>
-
-        </a>
-      </Tooltip>
-    {/each}
-  </div>
-
-  <h2>{description}</h2>
+<div id="skills">
+    <div class="flex flex-wrap gap-4 justify-center">
+        <SkillsBanner
+            title="Web"
+            description="Création de sites web pour développement fullstack"
+            icons={icons.webIcons}
+        ></SkillsBanner>
+        <SkillsBanner
+            title="Bases de données"
+            description="Utilisation de différents SGBD relationels et NoSQL pour créer, utiliser et administrer des bases de données"
+            icons={icons.dbIcons}
+        ></SkillsBanner>
+        <SkillsBanner
+            title="Java et Android"
+            description="Développement de logiciels en Java et d'applications Android"
+            icons={icons.javaIcons}
+        ></SkillsBanner>
+        <SkillsBanner
+            title="Python"
+            description=" Utilisation de Python pour analyse de données statistiques"
+            icons={icons.pythonIcons}
+        ></SkillsBanner>
+        <SkillsBanner
+            title="Système"
+            description="Développement d'outils système et de scripts Bash"
+            icons={icons.sysIcons}
+        ></SkillsBanner>
+        <SkillsBanner
+            title="CI/CD"
+            description="Utilisation d'outils de virtualisation pour l'intégration et le déploiement continus"
+            icons={icons.deploymentIcons}
+        ></SkillsBanner>
+    </div>
 </div>

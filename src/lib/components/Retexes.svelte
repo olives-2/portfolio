@@ -4,7 +4,7 @@
     import { iconsClasses } from "$lib/Icons";
 </script>
 
-<div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
     <RetexBanner
         title="Application d'administration"
         description="Développement d'une application d'administration de réseaux virtuels"
@@ -24,7 +24,7 @@
         description="Répertoire de séries TV"
         link={`${base}/retex/serizz`}
         img={`${base}/retexes/serizz/serizz.webp`}
-        typeIcon="iconify icon-[tabler--briefcase-filled]"
+        typeIcon="iconify icon-[tabler--school]"
     >
         <div class={iconsClasses}>
             <i class="iconify icon-[simple-icons--symfony] block"></i>
@@ -41,7 +41,7 @@
         description="Portage d'un jeu de plateau en application web"
         link={`${base}/retex/living_forest`}
         img={`${base}/retexes/living_forest/living_forest.webp`}
-        typeIcon="iconify icon-[tabler--briefcase-filled]"
+        typeIcon="iconify icon-[tabler--school]"
     >
         <div class={iconsClasses}>
             <i class="iconify icon-[simple-icons--react] block"></i>
