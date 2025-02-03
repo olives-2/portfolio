@@ -18,7 +18,7 @@ Affichage d'un réseau avec un algorithme de simulation de force
 
 ![Affichage de tous les modules](cape_admin2.webp)
 
-Affichage d'un réseau avec un algorithme de simulation de force
+Affichage de tous les modules connectés à l'application
 
 </section>
 
@@ -41,6 +41,7 @@ Affichage d'un réseau avec un algorithme de simulation de force
 ### Langages et méthodes
 
 - SvelteKit (framework web), NeutralinoJS (développement natif)
+- WebSockets pour connection aux modules
 - Discussions fréquentes sur l'avancée des fonctionnalités
 - Retours sur l'application par le porteur de projet
 - GitLab pour suivi des fonctionnalités et bugs
@@ -60,7 +61,7 @@ Affichage d'un réseau avec un algorithme de simulation de force
 
 ### Compétences Acquises
 
-- SvelteKit
+- SvelteKit, WebSockets
 - Introduction au développement web natif
 - Étude d'une architecture réseau inédite
 
