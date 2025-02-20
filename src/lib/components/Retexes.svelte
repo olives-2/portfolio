@@ -53,4 +53,15 @@
             <i class="iconify icon-[devicon-plain--nodejs] block"></i>
         </div>
     </RetexBanner>
+    <RetexBanner
+        title="Plugin Godot"
+        description="Développement d'un plugin Godot pour des tutoriels"
+        link={`${base}/retex/godot-tutorials`}
+        img={`${base}/retexes/godot-tutorials/godot-tutorials.png`}
+        typeIcon="iconify icon-[tabler--school]"
+    >
+        <div class={iconsClasses}>
+            <i class="iconify icon-[simple-icons--godotengine] block"></i>
+        </div>
+    </RetexBanner>
 </div>
