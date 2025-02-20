@@ -32,9 +32,9 @@ Affichage d'une étape d'un tutoriel
 
 ### Langages et méthodes
 
-- GDSCript
+- GDScript
 - Création de "nodes" dans l'éditeur pour ensuite placer le contenu
-- Plugin [MarkdownLabel](https://godotengine.org/asset-library/asset/2302) pour la création des tutoriels
+- Plugin [MarkdownLabel](https://godotengine.org/asset-library/asset/2302) pour la rédaction des tutoriels
 - Chaque étape dans un dossier différent
 - Lecture de fichiers texte
 
