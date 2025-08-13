@@ -2,6 +2,12 @@
 
 ## Développement de bibliothèques TypeScript pour interrogation MongoDB
 
+<span class="company">
+
+[RHINOV](https://www.rhinov.fr/)
+
+</span>
+
 <article class="retex-wrapper">
 
 <article class="screenshots">
@@ -11,6 +17,14 @@
 ![Nouvelle architecture de la plateforme AssetManager](RhinovMongoModelLibraryDiagram.webp)
 
 Nouvelle architecture de la plateforme AssetManager
+
+</section>
+
+<section class="screenshot">
+
+![Listing des arrangements](assetmanagerfront_listing.webp)
+
+Listing des arrangements
 
 </section>
 
