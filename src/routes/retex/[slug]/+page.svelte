@@ -8,14 +8,14 @@
 
     // The 404 page doesn't display if it is called from the server
     let mdSource = "";
-    
+
     onMount(async () => {
         const res = await fetch(`${base}/retexes/${data.slug}/${data.slug}.md`);
         if (!res.ok) {
             goto(`${base}/404`);
         }
         mdSource = await res.text();
-    })
+    });
 
     const renderer = new marked.Renderer();
     const imagePrefix = `${base}/retexes/${data.slug}/`;
@@ -56,71 +56,46 @@
         filter: drop-shadow(theme("dropShadow.2xl"));
     }
 
-    .markdown-wrapper :global(h3) {
-        font-size: 2rem;
-        text-align: center;
-    }
-
-    .markdown-wrapper :global(li) {
-        list-style: disc;
-    }
-
-    .markdown-wrapper :global(.retex-wrapper) {
+    .markdown-wrapper :global(.screenshots) {
         display: flex;
-        flex-flow: row ;
         justify-content: center;
-        align-items: center;
-        gap: theme("gap.8");
+        flex-flow: row wrap;
+        gap: 1rem;
+    }
+
+
+    .markdown-wrapper :global(.screenshots .screenshot) {
+        width: 24rem;
     }
 
     .markdown-wrapper :global(.content) {
-        display: grid;
-        grid-template-columns: 2fr 2fr;
-        grid-column-gap: 1rem;
-        grid-row-gap: 1rem;
+        @apply grid grid-flow-row grid-cols-2 gap-2
     }
 
-    .markdown-wrapper :global(.screenshots) {
-        display: flex;
-        flex-flow: column wrap;
-        justify-content: center;
-        align-items: center;
-        width: 45%;
-        gap: theme("gap.4");
+    .markdown-wrapper :global(.content .text) {
+        @apply bg-slate-800 p-2 bg-opacity-70 border-slate-600 border-2 rounded-xl;
     }
 
-    .markdown-wrapper :global(.screenshot) {
-        width: 60%;
+    .markdown-wrapper :global(.content .text ul){
+        list-style-type: circle;
+        padding: 1rem;
+    }
+
+    .markdown-wrapper :global(.content .text h3) {
+        font-size: x-large;
+    }
+
+    .markdown-wrapper :global(.company) {
         text-align: center;
+        font-size: x-large;
+        font-weight: bold;
+        text-decoration: underline;
     }
 
-    .markdown-wrapper :global(.screenshot p) {
-        display: inline;
-    }
-
-    .markdown-wrapper :global(img) {
-        border-radius: theme("borderRadius.xl");
-        border: solid 2px theme("colors.slate.400");
-        filter: drop-shadow(theme("dropShadow.2xl"));
-    }
-
-    .markdown-wrapper :global(.text) {
-        background-color: theme("colors.slate.800");
-        border-radius: theme("borderRadius.3xl");
-        padding: 2rem;
-        border: solid 2px theme("colors.slate.600");
-    }
-
-    @media (max-width: 895px) {
-
-        .markdown-wrapper :global(.retex-wrapper){
-            flex-flow: row wrap;
-        }
+    @media (max-width: 1152px) {
         .markdown-wrapper :global(.content) {
-            grid-template-columns: 1fr;
-        }
-        .markdown-wrapper :global(.screenshots) {
-            flex-flow: column wrap;
+            display: flex;
+            flex-flow: column;
         }
     }
 </style>

@@ -4,7 +4,7 @@
     import Retexes from "$lib/components/Retexes.svelte";
     import Skills from "$lib/components/Skills.svelte";
     import Title from "$lib/components/Title.svelte";
-    import { icons, iconsClasses } from "$lib/Icons.js";
+    import { iconsClasses } from "$lib/Icons.js";
 </script>
 
 <Presentation></Presentation>
@@ -47,7 +47,7 @@
             target="_blank"
             class="text-white text-xl p-2 bg-slate-800 border-2 border-slate-600 rounded-lg shadow-xl hover:bg-slate-600 hover:border-slate-400 transition-colors flex items-center"
         >
-            <span class="icon-[pepicons-print--cv]"></span> Télécharger mon CV</a
+            <span class="icon-[pepicons-print--cv] m-1"></span>Télécharger mon CV</a
         >
     </div>
 </div>

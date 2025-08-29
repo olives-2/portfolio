@@ -10,7 +10,7 @@
 
 
 <div
-class="gradient text-white flex flex-col min-h-full bg-gradient-to-br from-blue-700 to-blue-900 animate-gradient relative overflow-hidden"
+class="gradient text-white flex flex-col min-h-full bg-gradient-to-br from-blue-800 to-slate-900 relative overflow-hidden"
 >
 <Nav></Nav>
 <div class="mb-16"></div>
@@ -19,7 +19,7 @@ class="gradient text-white flex flex-col min-h-full bg-gradient-to-br from-blue-
   {@render children?.()}
 </div>
 {/key}
-<img src={`${base}/img/planet.webp`} class="absolute blur-md scale-150 left-16" alt="planet">
+<img src={`${base}/img/planet.webp`} class="absolute blur-md scale-100 left-16" alt="planet">
 <Footer />
 </div>
 

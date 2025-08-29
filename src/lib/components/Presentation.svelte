@@ -1,6 +1,7 @@
 <script>
     import { base } from "$app/paths";
 </script>
+
 <div class="flex justify-center">
     <div
         id="presentation"
@@ -14,8 +15,9 @@
                 Spécialisé dans le développement web et d'applications en POO
             </h2>
             <p class="text-lg p-2">
-                Je suis un étudiant d'informatique à l'IUT de
-                Bordeaux-Gradignan. Dans cette formation, je réalise des
+                Je suis un développeur web fullstack (avec un penchant pour le
+                backend) venant d'obtenir un BUT Informatique à l'IUT de
+                Bordeaux-Gradignan. Dans cette formation, j'ai réalisé des
                 missions me formant à des situations réelles du domaine de
                 l'informatique.
             </p>

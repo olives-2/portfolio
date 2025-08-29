@@ -10,6 +10,10 @@ export const icons = {
             class: "iconify icon-[simple-icons--javascript]",
         },
         {
+            name: "TypeScript",
+            class: "iconify icon-[simple-icons--typescript]",
+        },
+        {
             name: "React",
             class: "iconify icon-[simple-icons--react]",
             link: "https://fr.react.dev/",
@@ -29,6 +33,16 @@ export const icons = {
             name: "Symfony",
             class: "nf iconify icon-[simple-icons--symfony]",
             link: "https://symfony.com/",
+        },
+        {
+            name: "Node.js",
+            class: "nf icon-[simple-icons--nodedotjs]",
+            link: "https://nodejs.org/en",
+        },
+        {
+            name: "Bun",
+            class: "nf icon-[simple-icons--bun]",
+            link: "https://bun.sh",
         },
     ],
     javaIcons: [

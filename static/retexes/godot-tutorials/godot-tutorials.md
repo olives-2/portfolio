@@ -46,7 +46,7 @@ Affichage d'une étape d'un tutoriel
 
 - Plugin fonctionnel
 - Ajout d'autant de tutoriels que souhaité
-- La démonstration dans l'éditeur n'est pas interactive car impossible pour le moment sur Godot
+- La démonstration dans l'éditeur n'est pas interactive
 
 </section>
 
