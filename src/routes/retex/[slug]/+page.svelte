@@ -4,6 +4,7 @@
     import Loader from "$lib/components/Loader.svelte";
     import { goto } from "$app/navigation";
     import { onMount } from "svelte";
+
     export let data;
 
     // The 404 page doesn't display if it is called from the server
@@ -36,8 +37,19 @@
 {#if mdSource === ""}
     <Loader />
 {:else}
-    <div class="markdown-wrapper h-full">
-        {@html marked(mdSource, { renderer })}
+    <div class="flex gap-4 flex-col">
+        <div class="markdown-wrapper h-full" id="markdown">
+            {@html marked(mdSource, { renderer })}
+        </div>
+        <div class="flex justify-center">
+            <a
+                href={`${base}/retexes/${data.slug}/${data.slug}.pdf`}
+                target="_blank"
+                class="text-white text-xl p-2 bg-slate-800 border-2 border-slate-600 rounded-lg shadow-xl hover:bg-slate-600 hover:border-slate-400 transition-colors flex items-center"
+                ><span class="icon-[mingcute--pdf-fill] w-6 h-6 bg-white"
+                ></span>Télécharger le PDF</a
+            >
+        </div>
     </div>
 {/if}
 
@@ -63,20 +75,19 @@
         gap: 1rem;
     }
 
-
     .markdown-wrapper :global(.screenshots .screenshot) {
         width: 24rem;
     }
 
     .markdown-wrapper :global(.content) {
-        @apply grid grid-flow-row grid-cols-2 gap-2
+        @apply grid grid-flow-row grid-cols-2 gap-2;
     }
 
     .markdown-wrapper :global(.content .text) {
         @apply bg-slate-800 p-2 bg-opacity-70 border-slate-600 border-2 rounded-xl;
     }
 
-    .markdown-wrapper :global(.content .text ul){
+    .markdown-wrapper :global(.content .text ul) {
         list-style-type: circle;
         padding: 1rem;
     }
