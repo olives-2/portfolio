@@ -1,9 +1,7 @@
 <script>
   import "../app.css";
   import Nav from "$lib/components/Nav.svelte";
-  import { slide } from "svelte/transition";
   import Footer from "$lib/components/Footer.svelte";
-  import { cubicInOut } from "svelte/easing";
   import { base } from "$app/paths";
   let { data, children } = $props();
 </script>
@@ -15,7 +13,7 @@ class="gradient text-white flex flex-col min-h-full bg-gradient-to-br from-blue-
 <Nav></Nav>
 <div class="mb-16"></div>
 {#key data.url}
-<div in:slide={{ duration: 200, easing: cubicInOut }} out:slide={{ duration: 200, easing: cubicInOut }} class="z-10 p-2 min-h-full">
+<div class="z-10 p-2 min-h-full">
   {@render children?.()}
 </div>
 {/key}
