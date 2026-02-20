@@ -4,7 +4,7 @@
     import { icons } from "$lib/Icons";
 </script>
 <div id="skills">
-    <div class="flex flex-wrap gap-4 justify-center">
+    <div class="grid grid-cols-1 xl:grid-cols-3 gap-8 p-4 justify-center items-center">
         <SkillsBanner
             title="Web"
             description="Création de sites web pour développement fullstack"

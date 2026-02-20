@@ -43,7 +43,7 @@
         title="Plugin Godot"
         description="Développement d'un plugin Godot pour des tutoriels"
         link={`${base}/retex/godot-tutorials`}
-        img={`${base}/retexes/godot-tutorials/godot-tutorials.png`}
+        img={`${base}/retexes/godot-tutorials/godot-tutorials.webp`}
         typeIcon="iconify icon-[tabler--school]"
     >
         <div class={iconsClasses}>

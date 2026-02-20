@@ -17,7 +17,6 @@ class="gradient text-white flex flex-col min-h-full bg-gradient-to-br from-blue-
   {@render children?.()}
 </div>
 {/key}
-<img src={`${base}/img/planet.webp`} class="absolute blur-md scale-100 left-16" alt="planet">
 <Footer />
 </div>
 

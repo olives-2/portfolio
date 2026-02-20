@@ -8,7 +8,7 @@
 
 <section class="screenshot">
 
-![Affichage d'une étape d'un tutoriel](godot-tutorials.png)
+![Affichage d'une étape d'un tutoriel](godot-tutorials.webp)
 
 Affichage d'une étape d'un tutoriel
 
