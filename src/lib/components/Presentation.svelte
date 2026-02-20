@@ -1,5 +1,5 @@
 <script>
-    import { base } from "$app/paths";
+    import { asset } from "$app/paths";
 </script>
 
 <div class="flex justify-center">
@@ -23,7 +23,7 @@
             </p>
         </article>
         <img
-            src={`${base}/img/me.webp`}
+            src={asset("/img/me.webp")}
             alt="Portrait"
             class="rounded-full m-2 relative drop-shadow-2xl border-slate-400 border-2 w-64 h-64"
             fetchpriority="high"

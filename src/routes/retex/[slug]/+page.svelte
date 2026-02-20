@@ -1,25 +1,27 @@
 <script>
-    import { base } from "$app/paths";
+    import { asset, resolve } from "$app/paths";
     import { marked } from "marked";
     import Loader from "$lib/components/Loader.svelte";
-    import { goto } from "$app/navigation";
     import { onMount } from "svelte";
+    import { error } from "@sveltejs/kit";
 
     export let data;
 
-    // The 404 page doesn't display if it is called from the server
+    // The 404 page doesn't display if it is called from the server since it's a static site
     let mdSource = "";
+    let retexExists = true;
 
     onMount(async () => {
-        const res = await fetch(`${base}/retexes/${data.slug}/${data.slug}.md`);
-        if (!res.ok) {
-            goto(`${base}/404`);
+        const res = await fetch(asset(`/retexes/${data.slug}/${data.slug}.md`));
+        console.log(res.status)
+        if (res.status === 404) {
+            retexExists = false;
         }
         mdSource = await res.text();
     });
 
     const renderer = new marked.Renderer();
-    const imagePrefix = `${base}/retexes/${data.slug}/`;
+    const imagePrefix = asset(`/retexes/${data.slug}/`);
 
     renderer.image = (tokens) => {
         const href = tokens.href || "";
@@ -32,9 +34,18 @@
 
         return `<img src="${prefixedHref}" ${alt} ${title} />`;
     };
+    console.log(retexExists)
 </script>
 
-{#if mdSource === ""}
+
+{#if !retexExists}
+    <h2 class="text-4xl m-4 text-center">Je n'ai pas encore travaillé sur le projet "{data.slug}". Peut-être pour plus tard ?</h2>
+    <div class="flex justify-center">
+        <a  href={resolve("/")} class="bg-blue-800 p-2 m-4 rounded-lg text-white hover:bg-blue-600 transition-colors"
+            >Retourner à l'accueil</a
+        >
+    </div>
+{:else if mdSource === ""}
     <Loader />
 {:else}
     <div class="flex gap-4 flex-col">
@@ -43,7 +54,7 @@
         </div>
         <div class="flex justify-center">
             <a
-                href={`${base}/retexes/${data.slug}/${data.slug}.pdf`}
+                href={asset(`/retexes/${data.slug}/${data.slug}.pdf`)}
                 target="_blank"
                 class="text-white text-xl p-2 bg-slate-800 border-2 border-slate-600 rounded-lg shadow-xl hover:bg-slate-600 hover:border-slate-400 transition-colors flex items-center"
                 ><span class="icon-[mingcute--pdf-fill] w-6 h-6 bg-white"
@@ -52,6 +63,7 @@
         </div>
     </div>
 {/if}
+
 
 <style lang="postcss">
     .markdown-wrapper :global(h1) {

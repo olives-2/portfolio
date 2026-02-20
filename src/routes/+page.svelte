@@ -1,5 +1,5 @@
 <script>
-    import { base } from "$app/paths";
+    import { asset } from "$app/paths";
     import Presentation from "$lib/components/Presentation.svelte";
     import Retexes from "$lib/components/Retexes.svelte";
     import Skills from "$lib/components/Skills.svelte";
@@ -43,7 +43,7 @@
 
     <div class="flex justify-center">
         <a
-            href={`${base}/assets/CV_Matis_Olives.pdf`}
+            href={asset("/assets/CV_Matis_Olives.pdf")}
             target="_blank"
             class="text-white text-xl p-2 bg-slate-800 border-2 border-slate-600 rounded-lg shadow-xl hover:bg-slate-600 hover:border-slate-400 transition-colors flex items-center"
         >

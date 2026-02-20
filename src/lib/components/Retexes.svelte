@@ -1,6 +1,6 @@
 <script>
     import RetexBanner from "./RetexBanner.svelte";
-    import { base } from "$app/paths";
+    import { resolve, asset } from "$app/paths";
     import { iconsClasses } from "$lib/Icons";
 </script>
 
@@ -8,8 +8,8 @@
     <RetexBanner
         title="Bibliothèques d'interrogation MongoDB"
         description="Développement de bibliothèques TypeScript pour interrogation MongoDB"
-        link={`${base}/retex/mongo-query-builder`}
-        img={`${base}/retexes/mongo-query-builder/assetmanagerfront_listing.webp`}
+        link={resolve("/retex/mongo-query-builder")}
+        img={asset("/retexes/mongo-query-builder/assetmanagerfront_listing.webp")}
         typeIcon="iconify icon-[tabler--briefcase-filled]"
     >
         <div class={iconsClasses}>
@@ -25,8 +25,8 @@
     <!-- <RetexBanner
         title="Projet innovant"
         description="Portage d'un jeu de plateau en application web"
-        link={`${base}/retex/living_forest`}
-        img={`${base}/retexes/living_forest/living_forest.webp`}
+        link={resolve("/retex/living_forest")}
+        img={asset("/retexes/living_forest/living_forest.webp")}
         typeIcon="iconify icon-[tabler--school]"
     >
         <div class={iconsClasses}>
@@ -42,8 +42,8 @@
     <RetexBanner
         title="Plugin Godot"
         description="Développement d'un plugin Godot pour des tutoriels"
-        link={`${base}/retex/godot-tutorials`}
-        img={`${base}/retexes/godot-tutorials/godot-tutorials.webp`}
+        link={resolve("/retex/godot-tutorials")}
+        img={asset("/retexes/godot-tutorials/godot-tutorials.webp")}
         typeIcon="iconify icon-[tabler--school]"
     >
         <div class={iconsClasses}>
@@ -53,8 +53,8 @@
     <RetexBanner
         title="Administration de réseaux virtuels"
         description="Développement d'une application d'administration de réseaux virtuels"
-        link={`${base}/retex/cape`}
-        img={`${base}/retexes/cape/cape_admin.webp`}
+        link={resolve("/retex/cape")}
+        img={asset("/retexes/cape/cape_admin.webp")}
         typeIcon="iconify icon-[tabler--briefcase-filled]"
     >
         <div class={iconsClasses}>
@@ -67,8 +67,8 @@
     <RetexBanner
         title="Application web"
         description="Répertoire de séries TV"
-        link={`${base}/retex/serizz`}
-        img={`${base}/retexes/serizz/serizz.webp`}
+        link={resolve("/retex/serizz")}
+        img={asset("/retexes/serizz/serizz.webp")}
         typeIcon="iconify icon-[tabler--school]"
     >
         <div class={iconsClasses}>
