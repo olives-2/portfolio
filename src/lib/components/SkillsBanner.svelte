@@ -1,5 +1,4 @@
 <script>
-    import Tooltip from "sv-tooltip";
     import { iconsClasses } from "$lib/Icons";
     let { title, description, icons } = $props();
 </script>

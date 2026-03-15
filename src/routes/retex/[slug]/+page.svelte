@@ -3,7 +3,6 @@
     import { marked } from "marked";
     import Loader from "$lib/components/Loader.svelte";
     import { onMount } from "svelte";
-    import { error } from "@sveltejs/kit";
 
     export let data;
 
@@ -66,6 +65,7 @@
 
 
 <style lang="postcss">
+    @reference "tailwindcss";
     .markdown-wrapper :global(h1) {
         font-size: 2.5rem;
         margin: 0%;
@@ -96,7 +96,7 @@
     }
 
     .markdown-wrapper :global(.content .text) {
-        @apply bg-slate-800 p-2 bg-opacity-70 border-slate-600 border-2 rounded-xl;
+        @apply bg-slate-800 p-2  border-slate-600 border-2 rounded-xl;
     }
 
     .markdown-wrapper :global(.content .text ul) {

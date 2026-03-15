@@ -47,7 +47,8 @@
             target="_blank"
             class="text-white text-xl p-2 bg-slate-800 border-2 border-slate-600 rounded-lg shadow-xl hover:bg-slate-600 hover:border-slate-400 transition-colors flex items-center"
         >
-            <span class="icon-[mingcute--pdf-fill] m-1"></span>Télécharger mon CV</a
+            <span class="icon-[mingcute--pdf-fill] m-1"></span>Télécharger mon
+            CV</a
         >
     </div>
 </div>

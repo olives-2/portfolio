@@ -1,38 +1,19 @@
 <script>
-  import "../app.css";
-  import Nav from "$lib/components/Nav.svelte";
-  import Footer from "$lib/components/Footer.svelte";
-  let { data, children } = $props();
+    import "../app.css";
+    import Nav from "$lib/components/Nav.svelte";
+    import Footer from "$lib/components/Footer.svelte";
+    let { data, children } = $props();
 </script>
 
-
 <div
-class="gradient text-white flex flex-col min-h-full bg-gradient-to-br from-blue-800 to-slate-900 relative overflow-hidden"
+    class="gradient text-white flex flex-col min-h-full bg-linear-to-br from-blue-800 to-slate-900 relative overflow-hidden"
 >
-<Nav></Nav>
-<div class="mb-16"></div>
-{#key data.url}
-<div class="z-10 p-2 min-h-full">
-  {@render children?.()}
+    <Nav></Nav>
+    <div class="mb-16"></div>
+    {#key data.url}
+        <div class="z-10 p-2 min-h-full">
+            {@render children?.()}
+        </div>
+    {/key}
+    <Footer />
 </div>
-{/key}
-<Footer />
-</div>
-
-<style lang="postcss">
-  @theme {
-    --animate-gradient: wiggle 1s ease-in-out infinite;
-    @keyframes gradient {
-      0% {
-        background-position: 0% 50%;
-      }
-      50% {
-        background-position: 100% 50%;
-      }
-      100% {
-        background-position: 0% 50%;
-      }
-    }
-  }
-
-</style>
